@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Survey Form</title>
+		</head>
+		
+		<style>
+		body{
+		margin 0;
+		line-height: 1.4;
+		font-size: 2.5rem;
+		background: linear-gradient(250deg, #000000, #0f9b0f);		
+		color: #f3f3f3;
+		}
+		
+		h1{
+		font-size: 5rem;
+		margin: 0;
+		}
+		
+	
+	p{
+	margin-bottom: 0.5rem;
+	}
+	
+	.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+	
+	}
+	
+	media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+	
+	
+	
+	
+		label{
+		display:flex;
+		align-items: center;
+		font-size: 2.8rem;
+		margin-bottom: 0.5rem;
+		}
+		
+		.text-center{
+		text-align: center;
+		}
+		
+		.description{
+		font-style: italic;
+	font-size: 2.2rem;
+		}
+		
+		.form-group {
+  margin: 0 auto 1rem auto;
+  padding: 0.25rem;
+}
+
+		
+		.form-control {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.375rem 0.75rem;
+font-size: 2rem;
+  color: #000;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 2.25rem;
+  min-width: 2.25rem;
+}
+		
+		.input-textarea {
+  min-height: 150px;
+  width: 100%;
+font-size: 2rem;
+color: #000;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+
+
+.submit-button {
+  display: block;
+  width: 100%;
+min-height: 6rem;
+font-size: 2rem;
+  padding: 0.75rem;
+  background: #000;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+button{
+border: none;
+}
+
+button:hover {
+color: gold;}
+		</style>
+		
+	<main class="container">
+	<header>
+	<div>
+	<h1 class="text-center" id="title"><u>AutoGas Survey Form</u></h1>
+	<p class="text-center description" id="description">Thank you for helping us improve the well being of Mother Earth.</p>
+	</div>
+	</header>
+	
+	
+	<div class="form-group">
+	<form id="survey-form">
+	<label id="name-label" for="name">Name</label>
+	<input class="form-control" id="name" type="text" name="name" placeholder="Enter your name" required> 
+	<br>
+	<label id="email-label" for="Email">Email</label>
+	<input class="form-control" id="email" type="email" name="Email" placeholder="Enter your email" required>
+	<br>
+	<label id="number-label" for="name">Age</label>
+	<input class="form-control"id="number" type="number" name="Age" min="1" max="99" placeholder="Age(optional)">
+	
+
+
+	<p>Do you prefer using Gas Cookers in your Homes?</p>
+	<label for="Yes">
+	<input class="input-radio" type="radio" value="Yes" name="Yes/No">Yes</label>
+	<Label for="No">
+	<input class="input-radio" type="radio" value="No" name="Yes/No">No</label>
+	
+	
+	
+	<p>Where would you like us to improve?<br>(check all that apply)</p>
+	<Label for="Price">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Price">Price</label>
+	
+	<Label for="Mobile App">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Mobile App">Mobile App</label>
+	
+	<Label for="Web App">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Web App">Web App</label>
+	
+	<Label for="Marketing">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Marketing">Marketing</label>
+	
+	<Label for="Censor Design">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Censor Design">Censor Design</label>
+	
+	<Label for="Censor and App Sync">
+	<input class="input-checkbox" type="checkbox" name="Improvement" value="Censor and App Sync">Censor and App Sync</label>
+	
+	<br>
+      <label for="Source of information">How did you come to know about Autogas?<br></label>
+      <select class="form-control" id="dropdown" name="about" required>
+        <option disabled selected value>Select source</option>
+        <option value="Friend/Famil">Friend/Family</option>
+        <option value="Ad">Advert</option>
+        <option value="Word of mouth">Word of mouth</option>
+        <option value="Internet">Internet</option>
+        <option value="other">Other</option>
+      </select>
+
+
+	
+	<p>Any additional comment or suggestion?</p>
+	<textarea class="input-textarea" id="comments" type="text" name="comments" placeholder="Leave a comment">
+</textarea>
+	
+	
+	
+	<button class="submit-button" type="submit" id="submit" value="submit">Submit</button>
+	</form>
+	</div>
+	</main>
+	
